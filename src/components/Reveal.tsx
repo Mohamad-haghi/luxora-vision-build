@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/useReveal";
 
@@ -6,7 +6,6 @@ type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: 0 | 80 | 160 | 240 | 320;
-  as?: ElementType;
 };
 
 const delayClass: Record<number, string> = {
@@ -17,15 +16,15 @@ const delayClass: Record<number, string> = {
   320: "[transition-delay:320ms]",
 };
 
-export function Reveal({ children, className, delay = 0, as: Tag = "div" }: RevealProps) {
+export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <Tag
+    <div
       ref={ref}
       className={cn("reveal", delayClass[delay], inView && "reveal-in", className)}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
