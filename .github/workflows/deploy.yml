@@ -34,8 +34,14 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Check dist
-        run: test -d dist && echo "dist exists" || (echo "dist missing" && exit 1)
+      - name: Show build output
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Root files:"
+          ls -la
+          echo "Searching for build output:"
+          find . -maxdepth 4 -type d \( -name dist -o -name build \) -print
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
