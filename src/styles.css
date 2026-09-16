@@ -22,6 +22,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
   --color-sand: var(--sand);
+  --color-surface-soft: var(--surface-soft);
   --color-ink: var(--ink);
   --color-ink-foreground: var(--ink-foreground);
   --color-ink-muted: var(--ink-muted);
@@ -64,6 +65,7 @@
   --accent-foreground: oklch(0.225 0.012 60);
   --gold: oklch(0.715 0.072 80);
   --sand: oklch(0.925 0.018 80);
+  --surface-soft: oklch(0.958 0.012 82);
 
   --ink: oklch(0.198 0.012 58);
   --ink-foreground: oklch(0.964 0.01 85);
