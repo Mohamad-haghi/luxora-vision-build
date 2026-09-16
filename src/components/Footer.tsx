@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft, Check } from "lucide-react";
 import { brand, contact, navLinks } from "@/content/site";
 import { services } from "@/content/data";
@@ -14,7 +14,15 @@ async function subscribe(email: string): Promise<void> {
 function Newsletter() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "invalid">("idle");
+useEffect(() => {
+  if (state !== "done") return;
 
+  const timer = window.setTimeout(() => {
+    setState("idle");
+  }, 3000);
+
+  return () => window.clearTimeout(timer);
+}, [state]);
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
