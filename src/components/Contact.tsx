@@ -20,7 +20,7 @@ const rows = [
 
 export function Contact() {
   return (
-    <section id="contact" className="section-y scroll-mt-20 bg-background">
+    <section id="contact" className="section-y scroll-mt-20 bg-surface-soft">
       <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-6">
           <SectionHeading
