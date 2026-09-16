@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 
 export function Specialists() {
   return (
-    <section id="specialists" className="section-y scroll-mt-20 bg-background">
+    <section id="specialists" className="section-y scroll-mt-20 bg-surface-soft">
       <div className="shell">
         <SectionHeading
           index="03"
