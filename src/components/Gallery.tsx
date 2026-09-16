@@ -13,7 +13,7 @@ export function Gallery() {
   );
 
   return (
-    <section id="results" className="section-y scroll-mt-20 bg-background">
+    <section id="results" className="section-y scroll-mt-20 bg-surface-soft">
       <div className="shell">
         <SectionHeading
           index="04"
