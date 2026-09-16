@@ -8,7 +8,7 @@ export function Faq() {
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id ?? null);
 
   return (
-    <section id="faq" className="section-y scroll-mt-20 bg-background">
+    <section id="faq" className="section-y scroll-mt-20 bg-surface-soft">
       <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-4">
           <SectionHeading
