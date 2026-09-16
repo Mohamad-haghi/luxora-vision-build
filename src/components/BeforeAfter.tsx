@@ -43,7 +43,7 @@ export function BeforeAfter() {
   };
 
   return (
-    <section className="section-y bg-background">
+    <section className="section-y bg-surface-soft">
       <div className="shell">
         <SectionHeading
           index="02"
